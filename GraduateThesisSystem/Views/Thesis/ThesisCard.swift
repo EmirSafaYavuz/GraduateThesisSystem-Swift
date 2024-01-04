@@ -8,11 +8,32 @@
 import SwiftUI
 
 struct ThesisCard: View {
+    var title: String
+    var author: String
+    var thesisNo: String
+    var thesisType: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text(title)
+                .font(.headline)
+                .accessibilityAddTraits(.isHeader)
+                .lineLimit(2)
+                .truncationMode(/*@START_MENU_TOKEN@*/.tail/*@END_MENU_TOKEN@*/)
+            Spacer()
+            Text(thesisType)
+            HStack {
+                Text(author)
+                    .font(.body)
+                Spacer()
+                Text(thesisNo)
+            }
+            .font(.caption)
+        }
+        .padding()
     }
 }
 
 #Preview {
-    ThesisCard()
+    ThesisCard(title: "Thesis", author: "Author", thesisNo: "795132", thesisType: "Master")
 }

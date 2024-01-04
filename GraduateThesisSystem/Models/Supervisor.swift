@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Supervisor: Codable, Identifiable, Hashable {
+    let id: Int
+    let name: String
+    let phoneNumber: String
+}

@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Location: Codable, Identifiable, Hashable {
+    let id: Int
+    let city: String
+    let country: String
+}

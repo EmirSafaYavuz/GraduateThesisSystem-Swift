@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct InstituteDetailView: View {
+    var institute: Institute
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Section(header: Text("Institute Information")) {
+                Text("Name: \(institute.name)")
+                Text("University Name: \(institute.universityName)")
+            }
+        }
+        .navigationTitle(institute.name)
     }
 }
 
 #Preview {
-    InstituteDetailView()
+    InstituteDetailView(institute: Institute(id: 0, name: "Institute of Science", universityId: 0, universityName: "Maltepe University"))
 }

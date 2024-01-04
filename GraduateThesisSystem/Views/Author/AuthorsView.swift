@@ -14,8 +14,16 @@ struct AuthorsView: View {
     var body: some View {
         List {
             ForEach(viewModel.authors) { author in
-                Label(author.name, systemImage: "person")
+                NavigationLink(destination: AuthorDetailView(author: author)) {
+                    VStack(alignment: .leading) {
+                        Text(author.name)
+                            .font(.headline)
+                        Text(author.email)
+                        
+                    }
+                }
             }
+            .onDelete(perform: deleteAuthors)
         }
         .onAppear {
             viewModel.getAllAuthors()
@@ -34,6 +42,12 @@ struct AuthorsView: View {
             }
         }
     }
+    
+    func deleteAuthors(at offsets: IndexSet) {
+        let authorIdToDelete = viewModel.authors[offsets.first ?? 0].id
+        viewModel.deleteAuthor(with: authorIdToDelete)
+    }
+
 }
 
 #Preview {

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C823A20A-DFB4-4499-9F1B-257B3C989C61"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "45085920-B2A2-4390-8BB1-73EF82A2BCAC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GraduateThesisSystem/Networking/ThesisAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "addThesis(thesis:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "45085920-B2A2-4390-8BB1-73EF82A2BCAC - 428b784be4be2337"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static GraduateThesisSystem.ThesisAPI.addThesis(thesis: GraduateThesisSystem.ThesisInput, completion: (Swift.Result&lt;GraduateThesisSystem.Thesis, GraduateThesisSystem.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GraduateThesisSystem"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emirsafayavuz/Works/Mobile/GraduateThesisSystem/GraduateThesisSystem/Networking/ThesisAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "45085920-B2A2-4390-8BB1-73EF82A2BCAC - 428b784be4be2337"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static GraduateThesisSystem.ThesisAPI.addThesis(thesis: GraduateThesisSystem.ThesisInput, completion: (Swift.Result&lt;GraduateThesisSystem.Thesis, GraduateThesisSystem.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GraduateThesisSystem"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emirsafayavuz/Works/Mobile/GraduateThesisSystem/GraduateThesisSystem/Networking/ThesisAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

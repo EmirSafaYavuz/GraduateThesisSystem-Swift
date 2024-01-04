@@ -8,11 +8,31 @@
 import SwiftUI
 
 struct UniversityDetailView: View {
+    @ObservedObject var viewModel = UniversityViewModel()
+    var university: University
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Section(header: Text("University Information")) {
+                Text("Name: \(university.name)")
+                Text("City: \(university.city)")
+                Text("Country: \(university.country)")
+            }
+            
+            Section(header: Text("Institutes")) {
+                ForEach(viewModel.institutesOfUniversity, id: \.id) { institute in
+                    NavigationLink(destination: InstituteDetailView(institute: institute)) {
+                        Text(institute.name)
+                    }
+                }
+            }
+        }
+        .onAppear {
+            viewModel.getInstitutes(by: university.id)
+        }
+        .navigationTitle(university.name)
     }
 }
 
 #Preview {
-    UniversityDetailView()
+    UniversityDetailView(university: University(id: 0, name: "Maltepe University", locationId: 0, city: "İstanbul", country: "Turkey"))
 }

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Language: Codable, Identifiable, Hashable {
+    let id: Int
+    let name: String
+}

@@ -8,11 +8,26 @@
 import SwiftUI
 
 struct DashboardCardView: View {
+    var title: String
+    var value: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text(title)
+                .font(.headline)
+                .accessibilityAddTraits(.isHeader)
+            Spacer()
+            HStack {
+                Text("\(value) Records")
+                    .font(.body)
+                Spacer()
+            }
+            .font(.caption)
+        }
+        .padding()
     }
 }
 
 #Preview {
-    DashboardCardView()
+    DashboardCardView(title: "Author", value: "5")
 }

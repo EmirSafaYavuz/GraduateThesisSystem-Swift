@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct EditThesisView: View {
+    @Binding var thesis: Thesis
+    @Binding var isPresented: Bool
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            Form {
+                Section(header: Text("Edit Thesis Details")) {
+                    TextField("Title", text: $thesis.title)
+                    TextEditor(text: $thesis.abstract)
+                    // Add more fields as needed
+                }
+            }
+            .navigationTitle("Edit Thesis")
+            .navigationBarItems(
+                leading: Button("Cancel") {
+                    isPresented = false
+                },
+                trailing: Button("Save") {
+                    // Save the changes and dismiss the sheet
+                    isPresented = false
+                }
+            )
+        }
     }
-}
-
-#Preview {
-    EditThesisView()
 }
